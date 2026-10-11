@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Last Useless Man</title>
+<style>
+:root{--bg:#101719;--panel:#192326;--ink:#f0eadd;--muted:#b8bdb4;--dim:#91a09b;--gold:#d7b881;--teal:#9fc7ba}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font:18px/1.55 Georgia,"Times New Roman",serif;padding:max(28px,env(safe-area-inset-top)) 20px 48px}
+main{max-width:640px;margin:0 auto}
+h1{font-size:2.1rem;line-height:1.15;margin:28px 0 6px;color:var(--gold);font-weight:700}
+.sub{color:var(--dim);margin:0 0 28px;font-style:italic}
+a.ch{display:block;text-decoration:none;color:inherit;background:var(--panel);border:1px solid #2b3a3d;border-radius:14px;padding:16px 18px;margin:12px 0;min-height:56px}
+a.ch:active{border-color:var(--gold)}
+a.ch b{display:block;color:var(--teal);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-family:system-ui,sans-serif;font-weight:700}
+a.ch span{display:block;font-size:1.2rem;margin-top:2px}
+a.ch small{display:block;color:var(--muted);margin-top:4px;font-size:.92rem}
+.soon{color:var(--dim);text-align:center;margin-top:28px;font-style:italic}
+</style></head><body><main>
+<h1>The Last Useless Man</h1>
+<p class="sub">An interactive story, one chapter at a time.</p>
+<div id="list"></div>
+<p class="soon">More chapters coming soon.</p>
+</main>
+<script>
+/* To add a chapter: add one line here. */
+const CHAPTERS=[
+ {n:1,title:"The Ninth Gate",path:"chapters/01-the-ninth-gate/",blurb:"The Ministry of Small Affairs"}
+];
+document.getElementById('list').innerHTML=CHAPTERS.map(c=>
+ '<a class="ch" href="'+c.path+'"><b>Chapter '+c.n+'</b><span>'+c.title+'</span>'+(c.blurb?'<small>'+c.blurb+'</small>':'')+'</a>').join('');
+</script></body></html>
