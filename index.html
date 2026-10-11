@@ -25,7 +25,8 @@ a.ch small{display:block;color:var(--muted);margin-top:4px;font-size:.92rem}
 /* To add a chapter: add one line here. */
 const CHAPTERS=[
  {n:1,title:"The Ninth Gate",path:"chapters/01-the-ninth-gate/",blurb:"The Ministry of Small Affairs"},
- {n:2,title:"The Grandmothers\u2019 Dividend",path:"chapters/02-grandmothers-dividend/",blurb:"Vey Chronicle 002"}
+ {n:2,title:"The Grandmothers\u2019 Dividend",path:"chapters/02-grandmothers-dividend/",blurb:"Vey Chronicle 002"},
+ {n:3,title:"The Price of Tomorrow",path:"chapters/03-price-of-tomorrow/",blurb:"Vey Chronicle 003"}
 ];
 document.getElementById('list').innerHTML=CHAPTERS.map(c=>
  '<a class="ch" href="'+c.path+'"><b>Chapter '+c.n+'</b><span>'+c.title+'</span>'+(c.blurb?'<small>'+c.blurb+'</small>':'')+'</a>').join('');
